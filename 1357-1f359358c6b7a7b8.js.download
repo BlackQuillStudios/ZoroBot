@@ -1,0 +1,287 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1357],{86236:function(e,t,o){"use strict";o.d(t,{u:function(){return v},S:function(){return h}});var n=o(17663),r=o(66970);let i={height:0,width:0,x:0,y:0,bottom:0,left:0,right:0,top:0,toJSON:()=>{}},a=()=>{let e=(0,r.useRef)(null),[t,o]=(0,r.useState)(i);return(0,r.useEffect)(()=>{let t=e&&e.current?e.current.getBoundingClientRect():i;o(t)},[]),[e,t]};var l=o(24353),d=o(44222),u=o(33558),s=o(82403),p=o(56283),c=o(10355);let f=(0,n.F4)({"0%":{opacity:0},"100%":{opacity:1}}),h={northwest:n.iv`
+    bottom: calc(100% + ${"5px"});
+    left: 0;
+  `,north:n.iv`
+    bottom: calc(100% + ${"5px"});
+    left: 50%;
+    transform: translateX(-50%);
+  `,northeast:n.iv`
+    bottom: calc(100% + ${"5px"});
+    right: 0;
+  `,east:n.iv`
+    left: calc(100% + ${"5px"});
+    top: 50%;
+    transform: translateY(-50%);
+  `,southeast:n.iv`
+    top: calc(100% + ${"5px"});
+    right: 0;
+  `,south:n.iv`
+    top: calc(100% + ${"5px"});
+    left: 50%;
+    transform: translateX(-50%);
+  `,southwest:n.iv`
+    top: calc(100% + ${"5px"});
+    left: 0;
+  `,west:n.iv`
+    right: calc(100% + ${"5px"});
+    top: 50%;
+    transform: translateY(-50%);
+  `},b=(0,p.B)("Tooltip",{root:(e,t,o,r)=>[n.iv`
+      display: block;
+      color: ${l.w.neutral100};
+      text-align: center;
+      border-radius: 100px;
+      position: relative;
+      z-index: 2;
+      box-shadow: ${d.f.elevation30};
+      background-color: ${l.w.neutral800};
+      width: max-content;
+      max-width: 300px;
+      animation: ${u.f.transitionDuration}
+        ${u.f.transitionTimingFunction} ${f};
+      ${s.ZT.paragraph3Semibold};
+      padding: 2px 11px;
+      */
+
+      // Increase mouse area so tooltip doesn't disappear when
+      // mousing over a gap between its toggle and the tooltip itself.
+      &::before {
+        content: '';
+        position: absolute;
+        top: -${"5px"};
+        right: -${"5px"};
+        bottom: -${"5px"};
+        left: -${"5px"};
+        z-index: -1;
+      }
+    `,r&&n.iv`
+        label: -${r};
+        position: absolute;
+        ${h[r]};
+      `,o&&n.iv`
+        label: -multiline;
+        border-radius: 10px;
+        padding: 16px 14px;
+        text-align: left;
+      `,!e&&n.iv`
+        label: -single-line;
+        height: ${28}px;
+        padding: 2px 11px;
+      `,!t&&n.iv`
+        label: -non-interactive;
+        pointer-events: none;
+      `],content:e=>[n.iv`
+      display: block;
+    `,!e&&n.iv`
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      `]}),v=({children:e,allowMultiline:t=!1,ariaHidden:o,id:n,isInteractive:r,position:i="south"})=>{let[l,{height:d}]=a();return(0,c.U)("span",{"aria-hidden":o,css:b.root(t,r,d>28,i),"data-testid":`tooltip-${i}`,id:n,ref:l,role:"tooltip"},(0,c.U)("span",{css:b.content(t)},e))}},2180:function(e,t,o){"use strict";o.d(t,{I:function(){return v}});var n=o(66970),r=o(17663),i=o(86236),a=o(92451),l=o(24353),d=o(33558),u=o(82403),s=o(56283),p=o(10355),c=o(13665),f=function(e,t){var o={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&0>t.indexOf(n)&&(o[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols)for(var r=0,n=Object.getOwnPropertySymbols(e);r<n.length;r++)0>t.indexOf(n[r])&&Object.prototype.propertyIsEnumerable.call(e,n[r])&&(o[n[r]]=e[n[r]]);return o};let h=(0,a.F)("Input",["borderRadius","iconColor","inputValueColor","inputHeight","inputPaddingLeft","inputPaddingRight","inputPaddingTop","inputPaddingBottom","prependPaddingLeft","appendPaddingRight","outlineColor","placeholderColor","prependAppendColor","tooltipOpacity"]),b=(0,s.B)("Input",{root:e=>{var t;return r.iv`
+    ${h.borderRadius}: ${null!==(t=e.borderRadius)&&void 0!==t?t:3}px;
+    ${h.iconColor}: ${l.w.neutral600};
+    // Input is 44px height including border
+    ${h.inputHeight}: 42px;
+    ${h.inputPaddingLeft}: 15px;
+    ${h.inputPaddingRight}: 15px;
+    ${h.inputPaddingTop}: 9px;
+    ${h.inputPaddingBottom}: 9px;
+    ${h.placeholderColor}: ${l.w.neutral600};
+    ${h.inputValueColor}: ${l.w.neutral800};
+    ${h.prependPaddingLeft}: 15px;
+    ${h.appendPaddingRight}: 15px;
+    ${h.outlineColor}: ${l.w.neutral600};
+    ${h.prependAppendColor}: ${l.w.neutral800};
+    ${h.tooltipOpacity}: 0;
+
+    border: 1px solid var(${h.outlineColor});
+    // Box-shadow only for focus state
+    box-shadow: none;
+    // For Tooltip positioning
+    position: relative;
+    border-radius: var(${h.borderRadius});
+    background-color: ${l.w.neutral100};
+
+    // Only transition specific properties because some,
+    // like 'padding', will change but shouldn't transition.
+    transition-duration: ${d.f.transitionDuration};
+    transition-property: background-color, color, box-shadow;
+    transition-timing-function: ease;
+
+    &[data-errored] {
+      ${h.outlineColor}: ${l.w.error400};
+    }
+
+    &:not([data-disabled]):hover {
+      ${h.outlineColor}: ${l.w.blue};
+    }
+
+    &:not([data-disabled]):focus-within {
+      ${h.outlineColor}: ${l.w.blue};
+      box-shadow: 0 0 0 1px var(${h.outlineColor});
+    }
+
+    &[data-disabled] {
+      ${h.prependAppendColor}: ${l.w.neutral500};
+      ${h.outlineColor}: ${l.w.neutral400};
+      ${h.iconColor}: ${l.w.neutral400};
+      ${h.inputValueColor}: ${l.w.neutral500};
+      ${h.placeholderColor}: ${l.w.neutral500};
+      cursor: not-allowed;
+      background-color: ${l.w.neutral200};
+    }
+
+    &[data-readonly]:hover,
+    &[data-disabled]:hover {
+      ${h.tooltipOpacity}: 1;
+    }
+
+    &[data-full-width] {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &[data-icon-before] {
+      ${h.prependPaddingLeft}: 0;
+      ${h.inputPaddingLeft}: 0;
+    }
+
+    &[data-prepend][data-layout='inline'] {
+      ${h.inputPaddingLeft}: 0;
+    }
+
+    &[data-icon-after] {
+      ${h.appendPaddingRight}: 0;
+      ${h.inputPaddingRight}: 0;
+    }
+
+    &[data-append][data-layout='inline'] {
+      ${h.inputPaddingRight}: 0;
+    }
+  `},inputLayout:r.iv`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  `,prependAppend:r.iv`
+    color: var(${h.prependAppendColor});
+
+    &[data-layout='inline'] {
+      ${u.ZT.paragraph3Medium};
+
+      &[data-type='prepend'] {
+        margin-left: var(${h.prependPaddingLeft});
+        margin-right: 10px;
+      }
+
+      &[data-type='append'] {
+        margin-left: 10px;
+        margin-right: var(${h.appendPaddingRight});
+      }
+    }
+
+    &[data-layout='block'] {
+      ${u.ZT.smallPrint1};
+      background-color: ${l.w.neutral300};
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 30px;
+      padding: 0 var(${h.inputPaddingLeft});
+
+      &[data-type='prepend'] {
+        // Ensure prepend renders before icon.
+        order: -1;
+        border-top-left-radius: var(${h.borderRadius});
+        border-top-right-radius: var(${h.borderRadius});
+      }
+
+      &[data-type='append'] {
+        // Ensure append renders after icon.
+        // The value is a contrived number that needs to be
+        // greater than the number of siblings it has.
+        order: 10;
+        border-bottom-left-radius: var(${h.borderRadius});
+        border-bottom-right-radius: var(${h.borderRadius});
+      }
+    }
+  `,input:r.iv`
+    flex: 1;
+    ${u.ZT.paragraph3Medium};
+    color: var(${h.inputValueColor});
+    height: 100%;
+    padding-top: var(${h.inputPaddingTop});
+    padding-bottom: var(${h.inputPaddingBottom});
+    padding-left: var(${h.inputPaddingLeft});
+    padding-right: var(${h.inputPaddingRight});
+
+    &:not(textarea) {
+      height: var(${h.inputHeight});
+    }
+
+    // Style placeholder. Selectors cannot be combined,
+    // so keep 'em separated.
+    &::placeholder {
+      color: var(${h.placeholderColor});
+      // Necessary for Safari.
+      -webkit-text-fill-color: var(${h.placeholderColor});
+    }
+    &::-moz-placeholder {
+      color: var(${h.placeholderColor});
+      // Firefox has <1 'opacity' on its placeholders,
+      // so it has to be overridden.
+      opacity: 1;
+    }
+
+    // Bump font size for devices that don't support hovering
+    // to prevent mobile browsers from zooming in on inputs
+    // when they're focused. 16px is defined at the OS level
+    // of these devices, specifically iOS.
+    @media (hover: none) {
+      font-size: 16px;
+    }
+
+    // Hide "clear selection" X icon in Edge.
+    // https://zappy.zapier.com/F693DF53-79B7-4857-AADE-73E9BF3011DB.png
+    &::-ms-clear {
+      display: none;
+    }
+    // Hide "clear selection" X icon in Safari.
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+
+    // Hide selection when '[readonly]' since the text can't
+    // be edited, but the selection makes it look like it can be.
+    &[readonly]::selection {
+      background-color: transparent;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      color: ${l.w.neutral500};
+      -webkit-text-fill-color: ${l.w.neutral500};
+      white-space: pre-wrap;
+      ${h.placeholderColor}: ${l.w.neutral500};
+    }
+  `,icon:r.iv`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(${h.iconColor});
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    margin: 0 8px;
+    height: var(${h.inputHeight});
+
+    &[data-interactive] {
+      pointer-events: auto;
+    }
+  `,tooltip:r.iv`
+    opacity: var(${h.tooltipOpacity});
+    transition: ${d.f.transitionValue};
+    position: absolute;
+    left: 50%;
+    transform: translate(0, -15px);
+    z-index: 2;
+  `}),v=e=>{var{canClickIconBefore:t=!0,canClickIconAfter:o=!0,disabledText:r="Disabled",readOnlyText:a="Read-Only",isFocusable:l=!0,layout:d="inline",isFullWidth:u=!1,size:s="small",borderRadius:h=3}=e,v=f(e,["canClickIconBefore","canClickIconAfter","disabledText","readOnlyText","isFocusable","layout","isFullWidth","size","borderRadius"]);let g=Object.assign({canClickIconBefore:t,canClickIconAfter:o,disabledText:r,readOnlyText:a,isFocusable:l,layout:d,isFullWidth:u,size:s,borderRadius:h},v),[y,$]=(0,n.useState)(!1),[x,m]=(0,n.useState)(!1),[C]=(0,n.useState)(g.id?`${g.id}-tooltip`:(0,c.E)("Input__tooltip-")),w=g.isDisabled&&!!g.disabledText||g.isReadonly&&!!g.readOnlyText,O={iconSize:24,isFocused:y,isHovered:x},P=g.renderIconBefore&&g.renderIconBefore(O),R=g.renderIconAfter&&g.renderIconAfter(O);return(0,p.U)("div",{css:b.root(g),"data-append":g.appendContent?"":void 0,"data-disabled":g.isDisabled?"":void 0,"data-readonly":g.isReadonly?"":void 0,"data-errored":g.isErrored?"":void 0,"data-full-width":g.isFullWidth?"":void 0,"data-icon-after":R?"":void 0,"data-icon-before":P?"":void 0,"data-layout":g.layout,"data-prepend":g.prependContent?"":void 0,"data-size":g.size,onBlur:()=>$(!1),onClick:g.onClick,onFocus:()=>$(!0),onMouseEnter:()=>m(!0),onMouseLeave:()=>m(!1),role:"presentation"},(0,p.U)("div",{css:b.inputLayout},P&&(0,p.U)("div",{css:b.icon,"data-interactive":g.canClickIconBefore?"":void 0,"data-size":g.size},P),g.prependContent&&(0,p.U)("div",{css:b.prependAppend,"data-layout":g.layout,"data-size":g.size,"data-type":"prepend"},g.prependContent),g.children({"aria-activedescendant":g.ariaActiveDescendant,"aria-controls":g.ariaControls,"aria-describedby":w?C:g.ariaDescribedBy,"aria-errormessage":g.isErrored?g.ariaDescribedBy:void 0,"aria-hidden":g.ariaHidden,"aria-invalid":g.isErrored,"aria-label":g.ariaLabel,"aria-labelledby":g.ariaLabelledBy,"aria-required":g.ariaRequired,"data-size":g.size,autoComplete:g.autoComplete,autoFocus:g.autoFocus,css:b.input,tabIndex:g.isFocusable?void 0:-1,disabled:g.isDisabled,id:g.id,maxLength:g.maxLength,name:g.name,onBlur:g.onBlur,onChange:g.onChange,onFocus:g.onFocus,onKeyDown:g.onKeyDown,placeholder:g.placeholder,readOnly:g.isReadonly,required:g.isRequired,role:g.role,value:g.value},{hasIconBefore:!!P,hasIconAfter:!!R,isFocused:y,isHovered:x}),g.appendContent&&(0,p.U)("div",{css:b.prependAppend,"data-layout":g.layout,"data-type":"append","data-size":g.size},g.appendContent),R&&(0,p.U)("div",{css:b.icon,"data-interactive":g.canClickIconAfter?"":void 0,"data-size":g.size},R)),w&&(0,p.U)("div",{css:b.tooltip},(0,p.U)(i.u,{id:C,position:"south"},g.isReadonly?g.readOnlyText:g.disabledText)))}},82295:function(e,t,o){"use strict";o.d(t,{o:function(){return s}});var n=o(66970),r=o(2180),i=o(56283),a=o(33817),l=o(10355),d=function(e,t){var o={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&0>t.indexOf(n)&&(o[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols)for(var r=0,n=Object.getOwnPropertySymbols(e);r<n.length;r++)0>t.indexOf(n[r])&&Object.prototype.propertyIsEnumerable.call(e,n[r])&&(o[n[r]]=e[n[r]]);return o};let u=(0,i.B)("TextInput",{input:e=>[{minWidth:1},e.isMultiline&&(0,a.Q)("multiline",{height:"auto"}),e.isFullWidth&&(0,a.Q)("fullwidth",{width:"100%"}),e.resize&&(0,a.Q)(`resize-${e.resize}`,{resize:e.resize})]}),s=(0,n.forwardRef)((e,t)=>{var{isMultiline:o=!1,type:n="text",isFullWidth:i=!1,size:a="small",borderRadius:s=3}=e,p=d(e,["isMultiline","type","isFullWidth","size","borderRadius"]);let c=Object.assign({isMultiline:o,type:n,isFullWidth:i,size:a,borderRadius:s},p),f=c.isMultiline?"textarea":"input";return(0,l.U)(r.I,Object.assign({},c,{renderIconAfter:c.isMultiline?void 0:c.renderIconAfter,renderIconBefore:c.isMultiline?void 0:c.renderIconBefore}),e=>(0,l.U)(f,Object.assign({},e,{autoCapitalize:c.autoCapitalize,autoCorrect:c.autoCorrect,css:[e.css,u.input(c)],inputMode:c.inputMode,ref:t,rows:c.isMultiline?c.rows:void 0,spellCheck:c.spellCheck,type:c.isMultiline?void 0:c.type,value:e.value,onChange:e.onChange})))})},13665:function(e,t,o){"use strict";o.d(t,{E:function(){return r}});let n={},r=e=>(n[e]=(n[e]||0)+1,`${e}${n[e]}`)},82435:function(e,t){"use strict";var o,n;Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var o in t)Object.defineProperty(e,o,{enumerable:!0,get:t[o]})}(t,{PrefetchKind:function(){return o},ACTION_REFRESH:function(){return r},ACTION_NAVIGATE:function(){return i},ACTION_RESTORE:function(){return a},ACTION_SERVER_PATCH:function(){return l},ACTION_PREFETCH:function(){return d},ACTION_FAST_REFRESH:function(){return u},ACTION_SERVER_ACTION:function(){return s}});let r="refresh",i="navigate",a="restore",l="server-patch",d="prefetch",u="fast-refresh",s="server-action";(n=o||(o={})).AUTO="auto",n.FULL="full",n.TEMPORARY="temporary",("function"==typeof t.default||"object"==typeof t.default&&null!==t.default)&&void 0===t.default.__esModule&&(Object.defineProperty(t.default,"__esModule",{value:!0}),Object.assign(t.default,t),e.exports=t.default)},10769:function(e,t){"use strict";function o(e,t,o,n){return!1}Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"getDomainLocale",{enumerable:!0,get:function(){return o}}),("function"==typeof t.default||"object"==typeof t.default&&null!==t.default)&&void 0===t.default.__esModule&&(Object.defineProperty(t.default,"__esModule",{value:!0}),Object.assign(t.default,t),e.exports=t.default)},35196:function(e,t,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return x}});let n=o(60005),r=n._(o(66970)),i=o(46779),a=o(51615),l=o(84867),d=o(67325),u=o(74598),s=o(30045),p=o(53982),c=o(40030),f=o(10769),h=o(1976),b=o(82435),v=new Set;function g(e,t,o,n,r,i){if(!i&&!(0,a.isLocalURL)(t))return;if(!n.bypassPrefetchedCheck){let r=void 0!==n.locale?n.locale:"locale"in e?e.locale:void 0,i=t+"%"+o+"%"+r;if(v.has(i))return;v.add(i)}let l=i?e.prefetch(t,r):e.prefetch(t,o,n);Promise.resolve(l).catch(e=>{})}function y(e){return"string"==typeof e?e:(0,l.formatUrl)(e)}let $=r.default.forwardRef(function(e,t){let o,n;let{href:l,as:v,children:$,prefetch:x=null,passHref:m,replace:C,shallow:w,scroll:O,locale:P,onClick:R,onMouseEnter:k,onTouchStart:E,legacyBehavior:I=!1,..._}=e;o=$,I&&("string"==typeof o||"number"==typeof o)&&(o=r.default.createElement("a",null,o));let T=!1!==x,A=null===x?b.PrefetchKind.AUTO:b.PrefetchKind.FULL,j=r.default.useContext(s.RouterContext),M=r.default.useContext(p.AppRouterContext),z=null!=j?j:M,L=!j,{href:S,as:B}=r.default.useMemo(()=>{if(!j){let e=y(l);return{href:e,as:v?y(v):e}}let[e,t]=(0,i.resolveHref)(j,l,!0);return{href:e,as:v?(0,i.resolveHref)(j,v):t||e}},[j,l,v]),F=r.default.useRef(S),U=r.default.useRef(B);I&&(n=r.default.Children.only(o));let D=I?n&&"object"==typeof n&&n.ref:t,[N,H,K]=(0,c.useIntersection)({rootMargin:"200px"}),V=r.default.useCallback(e=>{(U.current!==B||F.current!==S)&&(K(),U.current=B,F.current=S),N(e),D&&("function"==typeof D?D(e):"object"==typeof D&&(D.current=e))},[B,D,S,K,N]);r.default.useEffect(()=>{z&&H&&T&&g(z,S,B,{locale:P},{kind:A},L)},[B,S,H,P,T,null==j?void 0:j.locale,z,L,A]);let q={ref:V,onClick(e){I||"function"!=typeof R||R(e),I&&n.props&&"function"==typeof n.props.onClick&&n.props.onClick(e),z&&!e.defaultPrevented&&function(e,t,o,n,i,l,d,u,s,p){let{nodeName:c}=e.currentTarget,f="A"===c.toUpperCase();if(f&&(function(e){let t=e.currentTarget,o=t.getAttribute("target");return o&&"_self"!==o||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.nativeEvent&&2===e.nativeEvent.which}(e)||!s&&!(0,a.isLocalURL)(o)))return;e.preventDefault();let h=()=>{"beforePopState"in t?t[i?"replace":"push"](o,n,{shallow:l,locale:u,scroll:d}):t[i?"replace":"push"](n||o,{forceOptimisticNavigation:!p})};s?r.default.startTransition(h):h()}(e,z,S,B,C,w,O,P,L,T)},onMouseEnter(e){I||"function"!=typeof k||k(e),I&&n.props&&"function"==typeof n.props.onMouseEnter&&n.props.onMouseEnter(e),z&&(T||!L)&&g(z,S,B,{locale:P,priority:!0,bypassPrefetchedCheck:!0},{kind:A},L)},onTouchStart(e){I||"function"!=typeof E||E(e),I&&n.props&&"function"==typeof n.props.onTouchStart&&n.props.onTouchStart(e),z&&(T||!L)&&g(z,S,B,{locale:P,priority:!0,bypassPrefetchedCheck:!0},{kind:A},L)}};if((0,d.isAbsoluteUrl)(B))q.href=B;else if(!I||m||"a"===n.type&&!("href"in n.props)){let e=void 0!==P?P:null==j?void 0:j.locale,t=(null==j?void 0:j.isLocaleDomain)&&(0,f.getDomainLocale)(B,e,null==j?void 0:j.locales,null==j?void 0:j.domainLocales);q.href=t||(0,h.addBasePath)((0,u.addLocale)(B,e,null==j?void 0:j.defaultLocale))}return I?r.default.cloneElement(n,q):r.default.createElement("a",{..._,...q},o)}),x=$;("function"==typeof t.default||"object"==typeof t.default&&null!==t.default)&&void 0===t.default.__esModule&&(Object.defineProperty(t.default,"__esModule",{value:!0}),Object.assign(t.default,t),e.exports=t.default)},40030:function(e,t,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"useIntersection",{enumerable:!0,get:function(){return d}});let n=o(66970),r=o(35695),i="function"==typeof IntersectionObserver,a=new Map,l=[];function d(e){let{rootRef:t,rootMargin:o,disabled:d}=e,u=d||!i,[s,p]=(0,n.useState)(!1),c=(0,n.useRef)(null),f=(0,n.useCallback)(e=>{c.current=e},[]);(0,n.useEffect)(()=>{if(i){if(u||s)return;let e=c.current;if(e&&e.tagName){let n=function(e,t,o){let{id:n,observer:r,elements:i}=function(e){let t;let o={root:e.root||null,margin:e.rootMargin||""},n=l.find(e=>e.root===o.root&&e.margin===o.margin);if(n&&(t=a.get(n)))return t;let r=new Map,i=new IntersectionObserver(e=>{e.forEach(e=>{let t=r.get(e.target),o=e.isIntersecting||e.intersectionRatio>0;t&&o&&t(o)})},e);return t={id:o,observer:i,elements:r},l.push(o),a.set(o,t),t}(o);return i.set(e,t),r.observe(e),function(){if(i.delete(e),r.unobserve(e),0===i.size){r.disconnect(),a.delete(n);let e=l.findIndex(e=>e.root===n.root&&e.margin===n.margin);e>-1&&l.splice(e,1)}}}(e,e=>e&&p(e),{root:null==t?void 0:t.current,rootMargin:o});return n}}else if(!s){let e=(0,r.requestIdleCallback)(()=>p(!0));return()=>(0,r.cancelIdleCallback)(e)}},[u,o,t,s,c.current]);let h=(0,n.useCallback)(()=>{p(!1)},[]);return[f,s,h]}("function"==typeof t.default||"object"==typeof t.default&&null!==t.default)&&void 0===t.default.__esModule&&(Object.defineProperty(t.default,"__esModule",{value:!0}),Object.assign(t.default,t),e.exports=t.default)},44370:function(e,t,o){e.exports=o(35196)}}]);
+//# sourceMappingURL=1357-1f359358c6b7a7b8.js.map
